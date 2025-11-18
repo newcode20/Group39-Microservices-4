@@ -7,24 +7,36 @@ Data will be requested by a call using fetch call to the program
 
 request parameters: title, description
 example call:
-
-fetch(http://localhost:5004/notifications/send), {
-        method: 'POST',
+```json
+       { method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: { 
-          targetURL: "http:localhost:5173"
+          "targetURL": "http:localhost:5173"
           "title": "New Update Made", 
           "description": "New functionality added for saving items" 
 } 
 };
-  
-# How to recieve data:
-You will recieve back JSON bpdy that includes a status, message, id, and time
+  ```
+# How to receive data:
+You will receive back JSON body that includes a status, message, id, and time
 
 example call:
+```json
 { 
   "status": "success", 
   "message": "Notification sent!", 
   "id": 22, 
   "time": "2025-11-03T10:20:00Z" 
 }
+```
+
+
+### Install dependecies
+Open your terminal inside the project folder and run:
+
+npm install express
+
+### Start program
+type in terminal:
+npm start
+
