@@ -1,13 +1,30 @@
-Notification Microservice
+# Microservice #4 : Notification Microservice
+# Overview
+This microservice allows you to send a notification alert to your site. 
 
-Data will be requested by a call using POST method 
+# How to request
+Data will be requested by a call using fetch call to the program 
 
 request parameters: title, description
 example call:
-POST /notifications/send 
-Content-Type: application/json 
+
+fetch(http://localhost:5004/notifications/send), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: { 
+          targetURL: "http:localhost:5173"
+          "title": "New Update Made", 
+          "description": "New functionality added for saving items" 
+} 
+};
   
+# How to recieve data:
+You will recieve back JSON bpdy that includes a status, message, id, and time
+
+example call:
 { 
-  "title": "New Update Made", 
-  "description": "New functionality added for saving items" 
+  "status": "success", 
+  "message": "Notification sent!", 
+  "id": 22, 
+  "time": "2025-11-03T10:20:00Z" 
 }
