@@ -1,0 +1,26 @@
+{
+  "name": "group39-microservices-4",
+  "version": "1.0.0",
+  "description": "Notification Microservice",
+  "main": "example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node notification.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newcode20/Group39-Microservices-4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/newcode20/Group39-Microservices-4/issues"
+  },
+  "homepage": "https://github.com/newcode20/Group39-Microservices-4#readme",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "express": "^5.1.0"
+  }
+}
